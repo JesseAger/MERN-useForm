@@ -1,8 +1,15 @@
+import { useState, useEffect } from "react";
 
+const [data, setData] = useState({
+
+})
 
 const Navbar =() =>{
     return(
-        <h2>Navbar</h2>
+       <section className ="">
+        
+       </section>
     );
 }
+
 export default Navbar;
