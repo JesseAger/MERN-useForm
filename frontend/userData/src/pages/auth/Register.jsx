@@ -11,7 +11,7 @@ const[formData, setformData] = useState({
 })
 
 const handleChange=(e)=>{
-    
+    setformData({...formData, [e.target.name]: [e.target.value]});
 }
 
 const handleSubmit=(e)=>{
@@ -26,10 +26,11 @@ const handleSubmit=(e)=>{
             <div>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="firstName">First Name</label>
+                        <label htmlFor="firstName" className="focus blue/60" >First Name</label>
                         <input type="text" 
                         name="firstName" 
                         id="firstName" 
+                        placeholder="first name"
                         onChange={handleChange}
                         />
                     </div>
@@ -65,6 +66,9 @@ const handleSubmit=(e)=>{
                         id="passwordConfirm" 
                         onChange={handleChange}
                         />
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit" />
                     </div>
                 </form>
             </div>
